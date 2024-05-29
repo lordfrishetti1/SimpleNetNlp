@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -20,7 +19,6 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-
   <PropertyGroup>
     <WeaverConfiguration>
       <Weavers>
@@ -28,15 +26,12 @@
       </Weavers>
     </WeaverConfiguration>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="MethodBoundaryAspect.Fody" Version="2.0.149-tags-v2-0-149-pre.1" />
+    <PackageReference Include="MethodBoundaryAspect.Fody" Version="2.0.149" />
     <PackageReference Include="Stanford.NLP.CoreNLP" Version="4.5.0" PrivateAssets="compile;build;buildTransitive" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="$(OutputPath)\*.dll" Exclude="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="buildTransitive" Visible="false" />
     <None Include="..\README.md" Pack="true" PackagePath="\" Visible="false" />
   </ItemGroup>
-
 </Project>
